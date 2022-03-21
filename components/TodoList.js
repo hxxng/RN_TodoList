@@ -3,7 +3,7 @@ import {Dimensions, View, StyleSheet, Text} from 'react-native';
 import Btn from './Btn';
 import InputText from './InputText';
 
-const TodoList = ({key, item, deleteTask, updateTask}) => {
+const TodoList = ({item, deleteTask, updateTask}) => {
   const [isEditing, setIsEditing] = useState(false);
   const [text, setText] = useState(item.text);
   const _handleUpdateButtonPress = () => {
@@ -23,7 +23,6 @@ const TodoList = ({key, item, deleteTask, updateTask}) => {
   return isEditing ? (
     <View style={styles.container}>
       <InputText
-        style={styles.edit}
         value={text}
         onChangeText={text => setText(text)}
         onSubmitEditing={_onSubmitEditing}
@@ -43,16 +42,14 @@ const TodoList = ({key, item, deleteTask, updateTask}) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: Dimensions.get('window').width - 15,
+    width: Dimensions.get('window').width - 10,
     marginLeft: 7,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   text: {
     width: 250,
-  },
-  edit: {
-    width: 200,
+    fontSize: 18,
   },
 });
 

@@ -16,7 +16,7 @@ const InputText = ({value, onChangeText, onSubmitEditing}) => {
 
 const styles = StyleSheet.create({
   input: {
-    width: Dimensions.get('window').width - 120,
+    width: Dimensions.get('window').width - 130,
     fontSize: 20,
     backgroundColor: '#f1f3f5',
     borderWidth: 1,

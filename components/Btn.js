@@ -9,14 +9,14 @@ const Btn = ({type, onPressOut, id}) => {
     onPressOut(id);
   };
   return (
-    <TouchableOpacity style={styles.iconbutton} onPressOut={_onPressOut}>
-      <Text>{type}</Text>
+    <TouchableOpacity style={styles.button} onPressOut={_onPressOut}>
+      <Text style={{color: 'white'}}>{type}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  iconbutton: {
+  button: {
     backgroundColor: 'rgba(111, 202, 186, 1)',
     borderRadius: 5,
     marginRight: 2,

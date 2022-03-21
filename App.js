@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, {useState} from 'react';
 import Title from './components/Title';
 import InputText from './components/InputText';
@@ -44,6 +36,7 @@ const App: () => Node = () => {
     setTasks(currentTasks);
   };
 
+  //수정 함수
   const _updateTask = item => {
     const currentTasks = Object.assign({}, tasks);
     currentTasks[item.id] = item;
@@ -57,7 +50,7 @@ const App: () => Node = () => {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Title title="Todo List✔️"></Title>
+      <Title title="Todo List ✔️"></Title>
       <View style={styles.input}>
         <InputText
           value={newTask}
@@ -91,7 +84,7 @@ const styles = StyleSheet.create({
   },
   input: {
     flexDirection: 'row',
-    width: Dimensions.get('window').width - 15,
+    width: Dimensions.get('window').width - 10,
     marginLeft: 7,
     alignItems: 'center',
     justifyContent: 'space-around',
